@@ -1,0 +1,338 @@
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 30px;
+}
+
+header > button {
+  height: 32px;
+  width: 32px;
+  background: none;
+  border: none;
+  stroke: #000;
+}
+
+header > button:hover {
+  cursor: pointer;
+  stroke: #fff;
+}
+
+.pagina {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  flex-grow: 1;
+}
+
+.btn-padrao {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 7px 20px;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-padrao:hover {
+  background-color: #ffc107;
+  color: #461e90;
+}
+
+.btn-padrao:active {
+  opacity: 0.8;
+}
+
+.pagina > .logo,
+.cadastro-container > .logo {
+  margin: 32px;
+  max-width: 148px;
+}
+
+.ja-possui-conta,
+.nao-possui-conta {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.ja-possui-conta > a,
+.nao-possui-conta > a {
+  color: #dec756;
+  text-decoration: none;
+}
+
+/* Apresentação */
+.texto-com-imagem {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.texto-com-imagem > p {
+  text-align: center;
+}
+
+.texto-com-imagem > img {
+  display: none;
+}
+
+.btn-entrar {
+  margin: 16px;
+}
+
+/* Cadastro */
+.cadastro-container {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo-cadastro {
+  text-align: left;
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+}
+
+.formulario-cadastro {
+  margin: 24px 0px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 8px 16px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.campo > label {
+  font-size: 14px;
+  margin-left: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.campo a {
+  cursor: pointer;
+  color: #d9d9d9;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.campo > input {
+  height: 36px;
+  padding: 0 10px;
+  font-family: "Inter", sans-serif;
+}
+
+.campo > input[type="date"] {
+  color: #575757;
+}
+
+.campo > input::placeholder {
+  font-family: "Inter", sans-serif;
+  color: #575757;
+}
+
+.campo.horizontal {
+  flex-direction: row;
+}
+
+.btn-info {
+  border: none;
+  background: none;
+  color: #d9d9d9;
+}
+
+.btn-info:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .conteudo-modal {
+  padding: 64px 32px;
+  width: 100%;
+  background-color: #461e90;
+  border-radius: 4px;
+  position: relative;
+  max-height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.conteudo-modal.senha > ol {
+  padding: 0 32px;
+}
+
+.conteudo-modal > .btn-fechar {
+  border: none;
+  background: none;
+  color: white;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
+.conteudo-modal > .btn-fechar:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.conteudo-modal.termos > ul {
+  padding: 0 32px;
+}
+
+.conteudo-modal > .btn-voltar {
+  margin: 0 auto;
+  margin-top: 48px;
+}
+
+.pagina > .img-pagina {
+  width: 70%;
+  max-width: 300px;
+}
+
+.formulario-token {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.formulario-token > h3 {
+  margin: 32px 0;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* Entrar */
+.entrar-container {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo-entrar {
+  margin: 16px 0;
+  width: 100%;
+  color: white;
+  font-size: 16px;
+}
+
+.formulario-entrar {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-entrar > .btn-entrar {
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 16px;
+}
+
+.btn-esqueceu {
+  color: #fff;
+  text-decoration: none;
+  margin: 16px auto;
+  margin-bottom: 32px;
+}
+
+.recebeu-confirmacao {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.recebeu-confirmacao > a {
+  color: #dec756;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+}
+
+/* Maior que tablet (768px) */
+@media screen and (min-width: 769px) {
+  body {
+    font-size: 16px;
+  }
+  .pagina > .logo:not(.cadastro-logo):not(.entrar-logo) {
+    display: none;
+  }
+  .texto-com-imagem > img {
+    display: block;
+    max-height: 450px;
+  }
+  .texto-com-imagem > p {
+    text-align: justify;
+    max-width: 600px;
+  }
+  .cadastro-container,
+  .entrar-container {
+    max-width: 600px;
+    position: relative;
+  }
+  .formulario-cadastro {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .formulario-cadastro > .campo {
+    width: 100%;
+    max-width: calc(50% - 8px);
+  }
+  .campo.checkbox {
+    max-width: 100%;
+  }
+  .cadastro-container > .logo.cadastro-logo {
+    opacity: 0.1;
+    position: absolute;
+    top: -25%;
+    max-width: 320px;
+    width: 100%;
+    margin: 0;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .modal .conteudo-modal {
+    width: 50%;
+    height: auto;
+  }
+  .entrar-logo {
+    max-width: 250px !important;
+    width: 250px;
+  }
+}

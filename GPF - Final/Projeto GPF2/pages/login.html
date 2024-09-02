@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPF</title>
+    <!-- Link para a fonte Inter do Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+    />
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="" class="logo-link"
+        ><img src="../assets/logo.png" alt="Logo" class="logo"
+      /></a>
+      <nav class="nav-center desktop-only">
+        <ul class="nav-list">
+          <li><a href="./index.html">Início</a></li>
+          <li><a href="./sobre-nos.html">Sobre nós</a></li>
+          <li><a href="./destaques.html">Destaques</a></li>
+        </ul>
+      </nav>
+      <nav class="nav-right desktop-only">
+        <ul class="nav-list">
+          <li><a class="special" href="./login.html">Entrar</a></li>
+          <li><a class="special" href="./login.html">Criar conta</a></li>
+        </ul>
+      </nav>
+      <button class="btn-menu mobile-only">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="#fff"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </button>
+    </header>
+    <header>
+      <button class="btn-voltar invisible">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="inherit"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+          />
+        </svg>
+      </button>
+    </header>
+    <main>
+      <div class="pagina" id="pagina-apresentacao">
+        <img src="../assets/logo.png" class="logo" />
+        <div class="texto-com-imagem">
+          <p>
+            A <b>Game Price Finder</b> é uma plataforma inovadora que reúne,
+            através da integração com as interfaces de programação de
+            aplicativos (APIs) das principais lojas e plataformas de games,
+            informações sobre os preços de jogos em diferentes plataformas e
+            lojas online, visando simplificar a experiência de encontrar as
+            melhores ofertas de jogos no mercado brasileiro. Com um design
+            intuitivo e amigável, os usuários podem facilmente pesquisar
+            promoções de jogos por título, plataforma ou gênero, garantindo que
+            sempre encontrem as ofertas mais atrativas. Além disso, nosso
+            sistema de notificações personalizadas mantém os usuários
+            atualizados sobre ofertas relevantes, garantindo que não percam
+            nenhuma oportunidade. Inicialmente, as atualizações dos preços serão
+            realizadas diariamente, mas poderão variar de acordo com
+            determinados fatores, como a dinâmica do mercado e a disponibilidade
+            de recursos técnicos. Os usuários também podem interagir com a
+            comunidade através de comentários e avaliações das promoções,
+            compartilhando suas experiências e dicas com outros membros. Ao
+            criar uma conta no Game Price Finder, os usuários têm acesso
+            exclusivo a recursos adicionais e podem participar ativamente da
+            comunidade, aproveitando ao máximo sua experiência de compra de
+            jogos online.
+          </p>
+          <img src="../assets/img-phone.png" />
+        </div>
+        <button class="btn-padrao btn-entrar">cadastrar</button>
+        <div class="ja-possui-conta">
+          <p>Já possui uma conta?</p>
+          <a href="#">Entre aqui</a>
+        </div>
+      </div>
+
+      <div class="pagina hidden" id="pagina-cadastrar">
+        <div class="cadastro-container">
+          <img src="../assets/logo.png" class="logo cadastro-logo" />
+          <p class="titulo-cadastro">Crie sua conta</p>
+          <form class="formulario-cadastro">
+            <div class="campo">
+              <label>Nome completo:</label>
+              <input
+                type="text"
+                name="nome"
+                placeholder="Digite seu nome"
+                required
+              />
+            </div>
+            <div class="campo">
+              <label>Email:</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Digite seu email"
+                required
+              />
+            </div>
+            <div class="campo">
+              <label>
+                Senha:
+                <button class="btn-info" type="button" id="btn-info-senha">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    width="14px"
+                    height="14px"
+                    class=""
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 0 1 .67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 1 1-.671-1.34l.041-.022ZM12 9a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </label>
+              <input
+                type="password"
+                name="senha"
+                placeholder="Mínimo de 8 caractéres"
+                minlength="8"
+                required
+              />
+            </div>
+            <div class="campo">
+              <label>Repita a senha:</label>
+              <input
+                type="password"
+                name="confimacao_senha"
+                placeholder="Confirme sua senha"
+                minlength="8"
+                required
+              />
+            </div>
+            <div class="campo">
+              <label
+                >Data de nascimento:
+                <button class="btn-info" type="button" id="btn-info-nascimento">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    width="14px"
+                    height="14px"
+                    class=""
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 0 1 .67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 1 1-.671-1.34l.041-.022ZM12 9a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </label>
+              <input
+                type="date"
+                name="nascimento"
+                placeholder="dd/mm/aaaa"
+                required
+              />
+            </div>
+            <div class="campo checkbox">
+              <div>
+                <input
+                  type="checkbox"
+                  name="aceito_termos"
+                  id="aceito_termos"
+                  required
+                />
+                <label for="aceito_termos">concordo com os </label
+                ><a href="#" id="btn-termos-uso"> termos de uso </a>
+              </div>
+            </div>
+            <div class="campo checkbox">
+              <div>
+                <input
+                  type="checkbox"
+                  name="aceito_autenticacao"
+                  id="aceito_autenticacao"
+                />
+                <label for="aceito_autenticacao">ativar </label>
+                <a href="#" id="btn-autenticacao"
+                  >autenticação de dois fatores</a
+                >
+              </div>
+            </div>
+          </form>
+        </div>
+        <button class="btn-padrao btn-entrar">cadastrar</button>
+        <div class="ja-possui-conta">
+          <p>Já possui uma conta?</p>
+          <a href="#">Entre aqui</a>
+        </div>
+
+        <div class="modal hidden" id="modal-senha">
+          <div class="conteudo-modal senha">
+            <button class="btn-fechar">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                height="32px"
+                width="32px"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <p>Conter pelo menos 3 das 4 diretrizes abaixo:</p>
+            <br />
+            <ol type="I">
+              <li>Conter pelo menos uma letra maiúscula;</li>
+              <li>Conter pelo menos uma letra minúscula;</li>
+              <li>Conter números (0 a 9);</li>
+              <li>
+                Conter símbolos, incluindo: !@#$%^&* _+=[]{}|\\:;'?,/"&lt;&gt;()
+              </li>
+            </ol>
+            <br />
+            <p>- Tamanho de no mínimo 8 caracteres;</p>
+            <p>- Não é permitido utilizar as 5 últimas senhas cadastradas;</p>
+            <p>- Mandatório alterar a senha a cada 180 dias;</p>
+            <p>
+              - A conta do usuário é bloqueada após 10 tentativas de acesso com
+              senha errada;
+            </p>
+            <p>
+              - A conta permanecerá bloqueada por 30 minutos. Após os 30
+              minutos, a conta é automaticamente desbloqueada para até 10
+              tentativas de acesso;
+            </p>
+          </div>
+        </div>
+
+        <div class="modal hidden" id="modal-nascimento">
+          <div class="conteudo-modal nascimento">
+            <button class="btn-fechar">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                height="32px"
+                width="32px"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <p>
+              Para oferecer a você uma experiência mais segura, personalizada e
+              conforme as leis de proteção de dados, como a GDPR e a LGPD,
+              solicitamos sua data de nascimento. Isso nos ajuda a melhorar
+              nossos serviços e garantir um uso adequado da plataforma.
+            </p>
+          </div>
+        </div>
+
+        <div class="modal hidden" id="modal-termos">
+          <div class="conteudo-modal termos">
+            <button class="btn-fechar">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                height="32px"
+                width="32px"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+
+            <p>
+              <strong>Termos de Uso da Plataforma Game Price Finder</strong>
+            </p>
+            <br />
+            <p>
+              Bem-vindo à plataforma Game Price Finder. Ao utilizar nossos
+              serviços, você concorda com os seguintes Termos de Uso.
+              Recomendamos que leia atentamente este documento, pois ele contém
+              informações importantes sobre seus direitos e obrigações como
+              usuário, bem como nossas práticas de conformidade com a Lei Geral
+              de Proteção de Dados (LGPD).
+            </p>
+            <br />
+
+            <p><strong>1. Aceitação dos Termos</strong></p>
+            <br />
+            <p>
+              Ao acessar ou usar a plataforma Game Price Finder, você concorda
+              em cumprir e ser legalmente vinculado aos Termos de Uso e à nossa
+              Política de Privacidade. Se você não concorda com estes termos,
+              por favor, não utilize nossos serviços.
+            </p>
+            <br />
+
+            <p><strong>2. Cadastro e Conta de Usuário</strong></p>
+            <br />
+            <p>
+              Para utilizar certos recursos da plataforma, você deve se
+              cadastrar e criar uma conta. Durante o processo de cadastro,
+              solicitamos as seguintes informações:
+            </p>
+            <p>
+              <br />
+            </p>
+
+            <ul>
+              <li>Nome completo</li>
+              <li>Email</li>
+              <li>Senha</li>
+              <li>Data de nascimento</li>
+            </ul>
+            <br />
+            <p>
+              Você concorda em fornecer informações verdadeiras, precisas e
+              completas e em manter essas informações atualizadas.
+            </p>
+            <br />
+
+            <p><strong>3. Segurança da Conta</strong></p>
+            <br />
+            <p>
+              Você é responsável por manter a confidencialidade da sua senha e
+              por todas as atividades que ocorrem na sua conta. Recomendamos que
+              utilize uma senha forte, que inclua caracteres especiais, números
+              e letras maiúsculas e minúsculas. Além disso, sugerimos a ativação
+              da autenticação de dois fatores (2FA) para maior segurança.
+            </p>
+            <br />
+
+            <p><strong>4. Privacidade e Proteção de Dados</strong></p>
+            <br />
+            <p>
+              Nos comprometemos a proteger a privacidade dos seus dados
+              pessoais. Todas as informações fornecidas por você são coletadas,
+              armazenadas e processadas conforme nossa Política de Privacidade.
+              Em conformidade com a LGPD, garantimos que seus dados pessoais
+              serão:
+            </p>
+            <br />
+            <ul>
+              <li>Tratados de forma lícita, leal e transparente</li>
+              <li>
+                Coletados para finalidades específicas, explícitas e legítimas
+              </li>
+              <li>
+                Adequados, pertinentes e limitados ao necessário para as
+                finalidades para as quais são processados
+              </li>
+            </ul>
+            <br />
+
+            <p><strong>5. Uso da Plataforma</strong></p>
+            <br />
+            <p>
+              A plataforma Game Price Finder é destinada a facilitar a busca e
+              comparação de preços de jogos nas principais lojas de games no
+              mercado brasileiro. Você concorda em utilizar a plataforma apenas
+              para fins lícitos e de acordo com todas as leis aplicáveis.
+            </p>
+            <br />
+
+            <p><strong>6. Conteúdo e Propriedade Intelectual</strong></p>
+            <br />
+            <p>
+              Todo o conteúdo disponível na plataforma, incluindo textos,
+              gráficos, logos, ícones, imagens e software, é propriedade da Game
+              Price Finder ou de seus licenciadores e é protegido pelas leis de
+              propriedade intelectual. Você não pode copiar, modificar,
+              distribuir, vender ou alugar qualquer parte dos nossos serviços ou
+              software.
+            </p>
+            <br />
+
+            <p><strong>7. Limitação de Responsabilidade</strong></p>
+            <br />
+            <p>
+              A Game Price Finder não será responsável por quaisquer danos
+              diretos, indiretos, incidentais, consequenciais ou punitivos
+              decorrentes do uso ou da incapacidade de usar nossos serviços,
+              mesmo que tenhamos sido informados da possibilidade de tais danos.
+            </p>
+            <br />
+
+            <p><strong>8. Alterações nos Termos de Uso</strong></p>
+            <br />
+            <p>
+              Reservamo-nos o direito de modificar estes Termos de Uso a
+              qualquer momento. Quaisquer alterações serão publicadas nesta
+              página e notificadas a você por email. O uso contínuo da
+              plataforma após a publicação das alterações constitui sua
+              aceitação dos novos termos.
+            </p>
+            <br />
+
+            <p><strong>9. Contato</strong></p>
+            <br />
+            <p>
+              Se você tiver qualquer dúvida sobre estes Termos de Uso ou sobre a
+              forma como tratamos seus dados pessoais, entre em contato conosco
+              através do email contato@gamepricefinder.com.
+            </p>
+            <br />
+
+            <p><strong>10. Legislação Aplicável e Foro</strong></p>
+            <br />
+            <p>
+              Estes Termos de Uso são regidos pelas leis da República Federativa
+              do Brasil. Qualquer disputa decorrente destes termos será
+              resolvida nos tribunais da comarca de [Sua Cidade], Brasil.
+            </p>
+            <p>
+              Ao clicar em "Concordo" ou utilizar nossos serviços, você
+              reconhece que leu, entendeu e concorda em se comprometer com estes
+              Termos de Uso.
+            </p>
+            <p>Data de Vigência: 10.02.2024</p>
+            <button class="btn-padrao btn-voltar">voltar</button>
+          </div>
+        </div>
+
+        <div class="modal hidden" id="modal-autenticacao">
+          <div class="conteudo-modal autenticacao">
+            <button class="btn-fechar">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                height="32px"
+                width="32px"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <p>
+              Recomendamos ativar a autenticação de dois fatores para aumentar a
+              segurança da sua conta, protegendo seus dados contra acessos não
+              autorizados, em nossos <strong>termos de uso</strong> você
+              encontrará mais detalhes sobre.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pagina hidden" id="pagina-token">
+        <img src="../assets/img-token.png" class="img-pagina" />
+        <form class="formulario-token">
+          <h3>Enviamos um email de confirmação de 4 digitos</h3>
+          <div class="campo horizontal">
+            <label>Insira aqui:</label>
+            <input
+              type="text"
+              name="token"
+              placeholder="0 0 0 0"
+              required
+              minlength="4"
+              maxlength="4"
+            />
+          </div>
+        </form>
+        <button class="btn-padrao btn-entrar">validar</button>
+        <div class="ja-possui-conta">
+          <p>Já possui uma conta?</p>
+          <a href="#">Entre aqui</a>
+        </div>
+      </div>
+
+      <div class="pagina hidden" id="pagina-sucesso">
+        <img src="../assets/img-sucesso.png" class="img-pagina" />
+        <form class="formulario-token">
+          <h3>Cadastro realizado com sucesso</h3>
+          <p>Você será redirecionado</p>
+          <br />
+          <br />
+        </form>
+        <div class="ja-possui-conta">
+          <p>Já possui uma conta?</p>
+          <a href="#">Entre aqui</a>
+        </div>
+      </div>
+
+      <div class="pagina hidden" id="pagina-entrar">
+        <img src="../assets/logo.png" class="logo entrar-logo" />
+        <div class="entrar-container">
+          <p class="titulo-entrar">Acessar sua conta:</p>
+          <form class="formulario-entrar">
+            <div class="campo">
+              <label>Email:</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Digite seu email"
+                required
+              />
+            </div>
+            <div class="campo">
+              <label> Senha: </label>
+              <input
+                type="password"
+                name="senha"
+                placeholder="Mínimo de 8 caractéres"
+              />
+            </div>
+            <button class="btn-padrao btn-entrar">entrar</button>
+            <a href="#" class="btn-esqueceu">esqueceu a senha</a>
+          </form>
+        </div>
+        <div class="nao-possui-conta">
+          <p>Não possui uma conta?</p>
+          <a href="#">Crie aqui</a>
+        </div>
+      </div>
+
+      <div class="pagina hidden" id="pagina-verificacao">
+        <img src="../assets/img-verificacao.png" class="img-pagina" />
+        <form class="formulario-token">
+          <h3>Verifique seu e-mail</h3>
+          <p>Enviamos um e-mail com instruções para redefinir sua senha.</p>
+          <br />
+          <br />
+        </form>
+        <div class="recebeu-confirmacao">
+          <p>Não recebeu o email de confirmação?</p>
+          <a href="#">Clique aqui</a>
+        </div>
+        <div class="ja-possui-conta">
+          <p>Já possui uma conta?</p>
+          <a href="#">Entre aqui</a>
+        </div>
+      </div>
+    </main>
+    <script src="../js/login.js"></script>
+  </body>
+</html>
